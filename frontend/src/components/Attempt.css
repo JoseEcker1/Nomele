@@ -1,0 +1,166 @@
+.attempt{
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    height: 8vh;
+}
+
+.square-attempt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6E6E6;
+    font-weight: 600;
+    color: white;
+    width: 7.9vh;
+    height: 7.9vh;
+    font-size: 5.2vh;
+}
+
+.front-style-attempt{
+    background-color: white;
+    color: black;
+}
+/* ------------------- SCALE ANIMATION --------------------------- */
+
+.black-border-attempt{
+    border: 2px solid black;
+}
+
+.light-border-attempt{
+    border: 2px solid #B8B8B8;
+}
+
+.digit-animation-attempt {
+    animation: changeScale 0.5s;
+    animation-play-state: running;
+}
+  
+@keyframes changeScale {
+    from {transform: scale(1.1);}
+    to {transform: scale(1);}
+}
+
+/* ------------------- FLIP ANIMATION ---------------------------  */
+
+.flip-container{
+    perspective: 20000px;
+    width: 7.9vh;
+    height: 7.9vh;
+}
+
+.flipper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6E6E6;
+    color: black;
+}
+
+.back{
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.active-flip{
+    transform: rotateY(180deg);
+}
+
+/* ------------------- SHAKE ANIMATION --------------------------- */
+
+.shake{
+    animation: shaking 0.5s;
+    animation-play-state: running;
+}
+
+.shake2{
+    animation: shaking2 0.5s;
+    animation-play-state: running;
+}
+
+@keyframes shaking {
+    0% { transform: translateX(0px) }
+    12% { transform: translateX(10px) }
+    25% { transform: translateX(-10px) }
+    37% { transform: translateX(10px)}
+    50% { transform: translateX(0px) }
+    62% {transform: translateX(10px)}
+    75% { transform: translateX(-10px) }
+    87% {transform: translateX(10px)}
+    100% { transform: translateX(0px) }
+}
+
+@keyframes shaking2 {
+    0% { transform: translateX(0px) }
+    12% { transform: translateX(10px) }
+    25% { transform: translateX(-10px) }
+    37% { transform: translateX(10px)}
+    50% { transform: translateX(0px) }
+    62% {transform: translateX(10px)}
+    75% { transform: translateX(-10px) }
+    87% {transform: translateX(10px)}
+    100% { transform: translateX(0px) }
+}
+
+/* --------------------------------------------------------------- */
+
+@media (width >= 3000px){ .attempt{ gap: 9px; } }
+
+@media (width >= 5000px){ .attempt{ gap: 12px; } }
+
+@media (width <= 700px){
+    .attempt{
+        height: 7.2vh;
+        gap: 5px;
+    }
+
+    .square-attempt{
+        font-size: 4.5vh;
+        height: 7vh;
+        width: 7vh;
+    }
+    
+    .flip-container{
+        height: 7vh;
+        width: 7vh;
+    }
+}
+
+@media (width <= 600px){
+    .attempt{
+        height: 7vh;
+        width: 90vw;
+        gap: 5px;
+    }
+
+    .square-attempt{
+        font-size: 3.7vh;
+        width: min(100%, 6.5vh);
+        height: 6.5vh;
+    }
+    
+    .flip-container{
+        width: min(100%, 6.5vh);
+        height: 6.5vh;
+    }
+}

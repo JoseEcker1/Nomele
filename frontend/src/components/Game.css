@@ -1,0 +1,36 @@
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 89vh;
+    width: 100%;
+    outline: none;
+}
+
+.container-game{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5px;
+    height: 58vh;
+    width: 100%;
+}
+
+@media (width <= 700px){
+    .game{
+        height: 89%;
+    } 
+
+    .container-game{
+        height: 56.3%;
+        margin-top: 6%;
+    }
+}
+
+@media (width <= 600px){
+    .container-game{
+        margin-top: 10%;
+    }
+}

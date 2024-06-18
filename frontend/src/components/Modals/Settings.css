@@ -1,0 +1,28 @@
+.modal-settings{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2vh;
+    overflow: scroll;
+    margin-top: min(5vh, 100px);
+    max-width: max(30vw, 50vh);
+}
+
+.header-settings{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    font-size: 1.2em;
+}
+
+.title-settings{
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.46em;
+}
+
+@media (width <= 600px){
+    .modal-settings{
+        width: 95vw;
+        margin: auto;
+        margin-top: 5vh;
+    }   
+}

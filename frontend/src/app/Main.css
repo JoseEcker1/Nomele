@@ -1,0 +1,9 @@
+.main{
+    height: 100vh;
+}
+
+@media (width <= 700px){
+    html, body, #root, .main{
+        height: 100%;
+    }
+}

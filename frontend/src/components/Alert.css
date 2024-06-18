@@ -1,0 +1,42 @@
+.container-alert{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.alert{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 61vh;
+    height: 7.87vh;
+    font-size: 2.7vh;
+    margin-top: -5.5vh;
+}
+
+.animation-alert{
+    animation: show 0.4s;
+    animation-play-state: running;
+}
+
+@keyframes show{
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+}
+
+@media (width <= 900px){
+    .alert{
+        width: 50vh;
+        height: 6.5vh;
+        font-size: 2vh;
+    }
+}
+
+@media (width < 700px){
+    .alert{
+        width: 40vh;
+        margin-top: -20px;
+    }
+}

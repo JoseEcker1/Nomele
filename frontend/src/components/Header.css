@@ -1,0 +1,43 @@
+.header{
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    align-items: center;
+    font-weight: 200;
+    font-size: 6.6vh;
+    height: 11vh;
+    width: 100%;
+}
+
+.invisible-header{
+    width: calc(100%/3);
+}
+
+.header span{
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.container-header{
+    display: flex;
+    width: calc(100%/3);
+    justify-content: flex-end;
+    padding-right: 1.8vw;
+    gap: 1vw;
+}
+
+.container-header button{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: 3.4vh;
+}
+
+@media (width <= 700px){
+    .header{
+        font-size: 4.5vh;
+        height: 11%;
+    }
+
+    .container-header i{
+        font-size: 3vh;
+    }
+}
