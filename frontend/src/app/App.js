@@ -15,14 +15,14 @@ function App() {
   const [answer, setAnswer] = useState("")
   const [alert, setAlert] = useState(false)
   const [enableFreeAttempt, setEnableFreeAttempt] = useState(true)
-  const [frequency, setFrequency] = useState(0)
+  const [frequency, setFrequency] = useState(40000)
   const [availableNames, setAvailableNames] = useState("992")
   const [loading, setLoading] = useState(true)
   const inputRef = useRef(null);
   const settingsRef = useRef(null);
 
   useEffect(()=>{
-    Axios.get(`${process.env.REACT_APP_BACKEND_URL}/drawname/5/0`)
+    Axios.get(`${process.env.REACT_APP_BACKEND_URL}/drawname/5/40000`)
     .then(response => {
       setAnswer(response.data.nome)
       setLoading(false)
